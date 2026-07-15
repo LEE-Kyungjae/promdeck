@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="utf-8" />
+    <script src="https://sdpi-components.dev/releases/v4/sdpi-components.js"></script>
+  </head>
+  <body>
+    <sdpi-item label="Prometheus URL">
+      <sdpi-textfield setting="promUrl" default="http://localhost:19090" placeholder="http://localhost:19090"></sdpi-textfield>
+    </sdpi-item>
+
+    <sdpi-item label="Title">
+      <sdpi-textfield setting="title" default="metric" placeholder="cpu"></sdpi-textfield>
+    </sdpi-item>
+
+    <sdpi-item label="Query">
+      <sdpi-textarea setting="query" placeholder="up{job=&quot;my-service&quot;}" rows="3"></sdpi-textarea>
+    </sdpi-item>
+
+    <sdpi-item label="Health query">
+      <sdpi-textarea setting="healthQuery" placeholder="optional — 0 means down, e.g. probe_success{...}" rows="2"></sdpi-textarea>
+    </sdpi-item>
+
+    <sdpi-item label="Down text">
+      <sdpi-textfield setting="downText" default="DOWN" placeholder="DOWN"></sdpi-textfield>
+    </sdpi-item>
+
+    <sdpi-item label="Unit">
+      <sdpi-textfield setting="unit" placeholder="% / ms / MB"></sdpi-textfield>
+    </sdpi-item>
+
+    <sdpi-item label="Decimals">
+      <sdpi-range setting="decimals" default="1" min="0" max="3" step="1" showlabels></sdpi-range>
+    </sdpi-item>
+
+    <sdpi-item label="Warn at">
+      <sdpi-textfield setting="warn" placeholder="e.g. 70"></sdpi-textfield>
+    </sdpi-item>
+
+    <sdpi-item label="Crit at">
+      <sdpi-textfield setting="crit" placeholder="e.g. 90"></sdpi-textfield>
+    </sdpi-item>
+
+    <sdpi-item label="Lower is worse">
+      <sdpi-checkbox setting="invert" label="invert thresholds"></sdpi-checkbox>
+    </sdpi-item>
+
+    <sdpi-item label="Sparkline query">
+      <sdpi-textarea setting="sparkQuery" placeholder="defaults to the query above" rows="2"></sdpi-textarea>
+    </sdpi-item>
+
+    <sdpi-item label="Sparkline range">
+      <sdpi-textfield setting="sparkRange" default="30m" placeholder="30m"></sdpi-textfield>
+    </sdpi-item>
+
+    <sdpi-item label="Refresh (sec)">
+      <sdpi-textfield setting="refreshSec" default="10" placeholder="10"></sdpi-textfield>
+    </sdpi-item>
+
+    <sdpi-item label="Open on press">
+      <sdpi-textfield setting="openUrl" placeholder="http://localhost:13000/d/..."></sdpi-textfield>
+    </sdpi-item>
+  </body>
+</html>

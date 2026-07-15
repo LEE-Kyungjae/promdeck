@@ -1,0 +1,6 @@
+node_modules/
+com.ze.promdeck.sdPlugin/bin/
+*.log
+.DS_Store
+dist/
+config.json

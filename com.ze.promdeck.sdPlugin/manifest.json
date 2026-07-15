@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+  "Name": "promdeck",
+  "Version": "1.0.0.0",
+  "Author": "ze",
+  "UUID": "com.ze.promdeck",
+  "Description": "Prometheus service health on Stream Deck keys. Press to open Grafana.",
+  "Category": "promdeck",
+  "CategoryIcon": "imgs/plugin/category-icon",
+  "Icon": "imgs/plugin/marketplace",
+  "CodePath": "bin/plugin.js",
+  "SDKVersion": 2,
+  "Software": {
+    "MinimumVersion": "6.5"
+  },
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "12"
+    },
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "Nodejs": {
+    "Version": "20",
+    "Debug": "enabled"
+  },
+  "Actions": [
+    {
+      "Name": "Prometheus Metric",
+      "UUID": "com.ze.promdeck.metric",
+      "Icon": "imgs/actions/metric/icon",
+      "Tooltip": "Shows a PromQL result with threshold colouring and a sparkline.",
+      "PropertyInspectorPath": "ui/metric.html",
+      "Controllers": ["Keypad"],
+      "States": [
+        {
+          "Image": "imgs/actions/metric/key",
+          "TitleAlignment": "middle",
+          "ShowTitle": false
+        }
+      ]
+    }
+  ]
+}
